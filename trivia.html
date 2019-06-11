@@ -2,7 +2,7 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="script.js"></script>
+<script src="trivia.js"></script>
 
 <head>
 	<title>Trivia Quiz</title>
@@ -18,21 +18,33 @@
 <body LINK="F7DD5E" VLINK="F7DD5E" ALINK="F7DD5E" onLoad="main()">
 <br>
 <FORM name="view">  
-	Question: &nbsp;<input type="text" name="qnum" size="2" >&nbsp;<input type="button" name="go" value=" Next Question" onClick=main()>
+	Question: &nbsp;<input type="text" name="qnum" size="2" >&nbsp;<input type="button" name="go" value=" Next Question" onClick=main() class="button">
     <br>
     <br>
-    Answer:&nbsp;&nbsp;&nbsp; <input type="text" id="qans" size="2">&nbsp;<input type="button" value="Submit Answer" onClick=submitAnswer()>
+    Answer:&nbsp;&nbsp;&nbsp; <input type="text" id="qans" size="2">&nbsp;<input type="button" value="Submit Answer" onClick=submitAnswer(); class="button">
+
+    
 	<br>
     <br>
     Score: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id= "score" name="qscore" size="2">
+
 	<br>
 	<br>
 	<TEXTAREA COLS=31 ROWS=9 id="question"  wrap="virtual"></TEXTAREA> 
+
+<img style="width:50px;height:50px;" src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787__340.png" name="searchImage">
+
 </FORM>
+    
+<a href="https://stelizabeth.github.io/cpt2019-raquelcpt/lastpage.html" class="button">Calculate My Mark</a>
+<br>
 
-<img id = "picture">
+    <img src="https://vignette.wikia.nocookie.net/nickelodeon/images/b/bc/Nickelodeon_Logo_2004.png/revision/latest?cb=20180220165222" name="searchImage" width="50px;height=50px";>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Disney_XD_-_2015.svg/1200px-Disney_XD_-_2015.svg.png" name="searchImage" width="50px;height=50px";>
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/2000px-Cartoon_Network_2010_logo.svg.png" name="searchImage" width="50px;height=50px";>
+     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" width="70px;height=70px";>
 
-
+   
 
 </body>
 
