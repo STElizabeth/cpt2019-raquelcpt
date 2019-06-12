@@ -1,6 +1,8 @@
 	h2
 {
 color:blue;font-family:comic sans ms;
+    
+    
 }
 
 	h3
@@ -9,11 +11,32 @@ color:red;font-family:comic sans ms;
 }
 	p
 {
-color:white;font-family:comic sans ms;
+color:black;font-family:comic sans ms;
 }
 body {
+  background-image: url("images/pencils.jpg");
   background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: fixed;
-  background-size: cover;
+  background-position: left top;
+  margin-right: 200px;
+  font-family: comic sans ms;
+  color:blue;
+}
+
+.button {
+  background-color: #e58bc1;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.text {
+    color:red;font-family:comic sans ms;
+}
+.finish {
+	visibility: hidden;
 }
