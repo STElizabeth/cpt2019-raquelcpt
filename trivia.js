@@ -29,7 +29,32 @@ function xmarkenable(){
 	var xmark = document.getElementById('xmark');
 	
 	xmark.style.visibility = "visible";
+
 }
+function smile(){
+	var smile = document.getElementById('smile');
+	
+	smile.style.visibility = "hidden";
+}
+function smileenable(){
+	var smile = document.getElementById('smile');
+	
+	smile.style.visibility = "visible";
+
+}
+
+function sad(){
+	var sad = document.getElementById('sad');
+	
+	sad.style.visibility = "hidden";
+}
+function sadenable(){
+	var sad = document.getElementById('sad');
+	
+	sad.style.visibility = "visible";
+
+}
+
 
 
 
@@ -46,6 +71,8 @@ if (ans===1){
         score++
 	checkmarkenable();
 	right.play()
+	smile()
+	sad()
 	document.searchImage.src ="images/checkmark.png"
 
     }
@@ -53,6 +80,8 @@ if (ans===1){
         document.getElementById("question").value="You are wrong"
 	wrong.play()
 	xmarkenable();
+	smile()
+	sad()
 	}
     document.view.qscore.value=score
 }
@@ -62,12 +91,16 @@ else if (ans===2){
         document.getElementById("question").value="You are right"
          score++
 	right.play()
+	smile()
+	sad()
 	checkmarkenable();
 	document.searchImage.src ="images/smile.png"
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -78,12 +111,16 @@ else if (ans===3){
     if(yy==="A"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -94,12 +131,16 @@ else if (ans===4){
     if(yy==="B"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
 	wrong.play()
+	smile()
+	sad()
 	xmarkenable();
         
     }
@@ -110,12 +151,16 @@ else if (ans===5){
     if(yy==="C"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -125,12 +170,16 @@ else if (ans===6){
     if(yy==="A"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -140,12 +189,16 @@ else if (ans===7){
     if(yy==="D"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -156,12 +209,16 @@ else if (ans===8){
     if(yy==="A"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -171,28 +228,36 @@ else if (ans===9){
     if(yy==="C"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
 }
 else if (ans===10){ 
-	document.getElementById("finish").style.visibility = "visible";
+	
 	y = document.getElementById("qans").value
     if(yy==="D"){
         document.getElementById("question").value="You are right"
          score++
+	smile()
+	sad()
 	checkmarkenable();
 	right.play()
     }
     else {
         document.getElementById("question").value="You are wrong"
         wrong.play()
+	smile()
+	sad()
 	xmarkenable();
     }
     document.view.qscore.value=score
@@ -214,6 +279,8 @@ if (i===1){
     document.view.qans.value=""
 	checkmark();
 	xmark();
+	sad();
+	smile();
 }
 else if (i===2){ 
 	document.view.qnum.value=i;	
@@ -287,26 +354,33 @@ else if (i===10){
 }
 
 
-var percentage= (score*10)
 function calculate(){
+var percentage = score*10
+
 if (percentage >=0 && percentage <= 100){
 		if (percentage >= 80){
-			document.write("Congragulations! You got a mark of: " + percentage)
+			document.view.question.value = "Congragulations! You got a mark of: " + percentage + "%"
+			smileenable()
+		
 		}
 		else if (percentage <80 && percentage >= 70){
-			document.write("Good job! You got a mark of: " + percentage)
+			document.view.question.value = "Good job! You got a mark of: " + percentage + "%"
+			smileenable()
 			
 		}
 		else if (percentage <70 && percentage >= 60){
-			document.write("Nice try. You got a mark of: " + percentage)
+			document.view.question.value = "Nice try. You got a mark of: " + percentage + "%"
+			sadenable()
 			
 		}
 		else if (percentage <60 && percentage >=50){
-			document.write("Better luck next time. You got a mark of: " + percentage)
+			document.view.question.value = "Better luck next time. You got a mark of: " + percentage + "%"
+			sadenable()
 		
 		}
 		else{
-			document.write("Try again? You got a mark of: " + percentage)
+			 document.view.question.value = "Try again? You got a mark of: " + percentage + "%"
+			sadenable()
 			
 		}
 
